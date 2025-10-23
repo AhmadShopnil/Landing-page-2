@@ -24,3 +24,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.polygon {
+ clip-path: polygon(0 0, 100% 0, 100% 100%, 85% 89%, 70% 88%, 50% 100%, 31% 87%, 19% 87%, 9% 92%, 0 100%);
+}
+

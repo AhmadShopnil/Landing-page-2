@@ -1,14 +1,14 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import BannerSection from "./components/BannerSection";
-import ProductImages from "./components/ProductImages";
-import ProductSpecialties from "./components/ProductSpecialties";
-import CustomerReviews from "./components/CustomerReviews";
-import ProductCheckout from "./components/ProductCheckout";
-import FooterSection from "./components/FooterSection";
-import Banner from "./components/Banner";
-import ImageSlider from "./components/ImageSlider";
+import BannerSection from "../components/BannerSection";
+import ProductImages from "../components/ProductImages";
+import ProductSpecialties from "../components/ProductSpecialties";
+import ProductCheckout from "../components/ProductCheckout";
+import CustomerReviews from "../components/CustomerReviews";
+import FooterSection from "../components/FooterSection";
+import ProductHeader from "../components/Demo1/ProductHeader";
+
 
 export default function ProductLanding() {
   const product = useMemo(() => ({
@@ -46,14 +46,12 @@ export default function ProductLanding() {
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
-      {/* <BannerSection product={product} /> */}
-      <Banner/>
-      <main className="container mx-auto px-2 md:px-6 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <BannerSection product={product} />
+      {/* <ProductHeader/> */}
+      <main className="container mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-3 space-y-6">
-          {/* <ProductImages product={product} /> */}
-         <ProductSpecialties specialties={product.specialties} />
-          <ImageSlider/>
-          
+          <ProductImages product={product} />
+          <ProductSpecialties specialties={product.specialties} />
           <ProductCheckout product={product} />
           <CustomerReviews reviews={reviews} />
         </div>
