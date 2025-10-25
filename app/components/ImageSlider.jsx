@@ -18,9 +18,10 @@ export default function ImageSlider() {
     <div className="w-full py-4">
       <Swiper
         spaceBetween={20}
-        slidesPerView={2}
+        slidesPerView={1.2}
         breakpoints={{
-          768: { slidesPerView: 3 }, // for medium and large screens
+           
+          768: { slidesPerView: 3 }, 
         }}
         loop={true}
         grabCursor={true}

@@ -9,6 +9,8 @@ import ProductCheckout from "./components/ProductCheckout";
 import FooterSection from "./components/FooterSection";
 import Banner from "./components/Banner";
 import ImageSlider from "./components/ImageSlider";
+import OfferCountdown from "./components/OfferCountdown";
+import Navbar from "./components/Navbar";
 
 export default function ProductLanding() {
   const product = useMemo(() => ({
@@ -30,7 +32,7 @@ export default function ProductLanding() {
       "Breathable Aero fabric",
       "Anti-odor treatment",
       "4-way stretch",
-      "Pre-shrunk & colorfast",
+      // "Pre-shrunk & colorfast",
     ],
     colors: ["Black", "White", "Olive", "Navy"],
     sizes: ["XS", "S", "M", "L", "XL"],
@@ -46,16 +48,20 @@ export default function ProductLanding() {
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
-      {/* <BannerSection product={product} /> */}
-      <Banner/>
-      <main className="container mx-auto px-2 md:px-6 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div className="lg:col-span-3 space-y-6">
-          {/* <ProductImages product={product} /> */}
-         <ProductSpecialties specialties={product.specialties} />
-          <ImageSlider/>
-          
+      <Navbar/>
+      <BannerSection product={product} />
+  
+      {/* <Banner/> */}
+      <main className="container mx-auto px-2 md:px-6 py-12 ">
+        <div className=" space-y-4">
+          <OfferCountdown/>
+            <ImageSlider/>
+          <ProductSpecialties specialties={product.specialties} />
           <ProductCheckout product={product} />
-          <CustomerReviews reviews={reviews} />
+         
+         <CustomerReviews reviews={reviews} />
+        
+          
         </div>
         
       </main>

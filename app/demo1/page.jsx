@@ -47,7 +47,7 @@ export default function ProductLanding() {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <BannerSection product={product} />
-      {/* <ProductHeader/> */}
+      
       <main className="container mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-3 space-y-6">
           <ProductImages product={product} />
